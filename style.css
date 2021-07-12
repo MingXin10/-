@@ -125,6 +125,7 @@ q:after {
 .nav {
   padding: 5px 0;
   justify-content: space-around;
+  background-color: #fff;
   /* position: fixed; */
 }
 .logo {
