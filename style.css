@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+.nav {
+  padding: 5px 0;
+  justify-content: space-around;
+  position: fixed;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+}
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+.nav-bar {
+  padding: 15px 0;
+}
+.nav-bar > a {
+  color: #000;
+  font-size: 17px;
+  margin-right: 40px;
+  transition: 1s;
+}
+.nav-bar > a:hover {
+  text-decoration: none;
+  color: #b9a92def;
+}
+.shopButton {
+  /* display: flex; */
+  width: 60px;
+  height: 90px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #ffe100;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.mall {
+  font-size: 14px;
+}
+
+.banner {
+  display: flex;
+  background: url("./images/1_官網首圖_魷魚螺肉蒜粽_2000x960.jpg");
+  flex-direction: column;
+  align-items: center;
+}
+.goodHeart {
+  margin-top: 370px;
+}
+.slider {
+  display: flex;
+  margin-top: 220px;
+}
+.circle {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+.circle01 {
+  background-color: #fff;
+}
+.goDown {
+  color: #fff;
+  cursor: pointer;
+  animation: goDown 2s linear infinite alternate both;
+  margin-bottom: 40px;
+}
+@keyframes goDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.shop24hr {
+  display: flex;
+  margin: 80px 0;
+}
+.title {
+  color: rgb(169, 169, 169);
+  font-size: 55px;
+  margin: 50px 0;
+}
+.text {
+  width: 350px;
+  padding: 50px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  position: relative;
+  margin: 50px 65px 50px 20px;
+  font-size: 15px;
+  color: #7c7c7c;
+  line-height: 24px;
+}
