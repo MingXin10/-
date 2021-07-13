@@ -126,7 +126,8 @@ q:after {
   padding: 5px 0;
   justify-content: space-around;
   background-color: #fff;
-  /* position: fixed; */
+  position: fixed;
+  width: 100%;
 }
 .logo {
   width: 60px;
@@ -150,13 +151,11 @@ q:after {
   color: #b9a92def;
 }
 .shopButton {
-  /* display: flex; */
   width: 60px;
   height: 90px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: #ffe100;
-  overflow: hidden;
   text-align: center;
   transition: all 0.5s;
 }
@@ -166,10 +165,12 @@ q:after {
 }
 
 .banner {
-  display: flex;
-  background: url("./images/1_官網首圖_魷魚螺肉蒜粽_2000x960.jpg");
+  /* display: flex;  row已經有flex */
+  background: url("./images/1_官網首圖_魷魚螺肉蒜粽_2000x960.jpg") no-repeat;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
+  border: 1px solid red;
 }
 .goodHeart {
   margin-top: 370px;
@@ -206,23 +207,56 @@ q:after {
     transform: translateY(0px);
   }
 }
-.shop24hr {
-  display: flex;
-  margin: 80px 0;
-}
+
 .title {
   color: rgb(169, 169, 169);
-  font-size: 55px;
+  font-size: 50px;
   margin: 50px 0;
+  padding: 0;
 }
 .text {
-  width: 350px;
   padding: 50px 0;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   position: relative;
-  margin: 50px 65px 50px 20px;
+  margin: 50px 20px 50px 0;
   font-size: 15px;
   color: #7c7c7c;
   line-height: 24px;
+}
+.newsBanner {
+  width: 100%;
+  height: 600px;
+  display: block;
+  background: url("./images/homeNews-banner.jpg") no-repeat;
+  background-size: cover;
+  filter: brightness(0.6);
+  color: red;
+  /* overflow: hidden; */
+}
+.newsText {
+  position: absolute;
+  left: 50%;
+  bottom: 200px;
+  transform: translate(-50%);
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  font-family: 微軟正黑體, serif;
+}
+
+/* .news p {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  transform: translateY(50px);
+  color: #fff;
+  transition: 0.5s;
+}
+.new:hover .news p {
+  transform: translateY(-250px);
+} */
+.relative {
+  position: relative;
 }
