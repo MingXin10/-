@@ -125,12 +125,48 @@ q:after {
 body {
   font-family: 微軟正黑體, serif;
 }
+
 .displayNone {
   display: none;
 }
-@media (min-width: 992px) {
+.font-size-15px {
+  font-size: 15px;
+}
+.font-size-30px {
+  font-size: 30px;
+}
+.bigTitleMaPa {
+  margin-top: 20px;
+}
+.content {
+  margin: auto;
+  margin-top: 20px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 50px 0;
+}
+@media (min-width: 768px) {
   .displayNone {
     display: block;
+  }
+}
+@media (min-width: 992px) {
+  .font-size-30px {
+    font-size: 45px;
+  }
+  .bigTitleMaPa {
+    margin-top: 0;
+    margin-right: 30px;
+    padding-left: 60px;
+  }
+  .content {
+    color: #7c7c7c;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 50px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-top: 0;
   }
 }
 
@@ -144,6 +180,10 @@ body {
 }
 .hidden {
   overflow: hidden;
+}
+
+.relative {
+  position: relative;
 }
 
 .nav {
@@ -231,12 +271,6 @@ body {
   }
 }
 
-.title {
-  color: rgb(169, 169, 169);
-  font-size: 50px;
-  margin: 50px 0;
-  padding: 0;
-}
 .text {
   padding: 50px 0;
   border-top: 1px solid #000;
@@ -256,7 +290,6 @@ body {
   background-position: center;
   filter: brightness(0.6);
   color: red;
-  /* overflow: hidden; */
 }
 .newsText {
   position: absolute;
@@ -266,22 +299,6 @@ body {
   font-weight: bold;
   text-align: center;
   color: #fff;
-}
-
-/* .news p {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%);
-  transform: translateY(50px);
-  color: #fff;
-  transition: 0.5s;
-}
-.new:hover .news p {
-  transform: translateY(-250px);
-} */
-.relative {
-  position: relative;
 }
 
 .date {
@@ -299,6 +316,11 @@ body {
 }
 .announcement {
   padding: 60px 20px 0 20px;
+  display: block;
+  color: #000;
+}
+.announcement:hover {
+  text-decoration: none;
 }
 .announcement:hover .date {
   color: #af8f56;
@@ -328,8 +350,32 @@ body {
   height: 100%;
   transition: transform 1s ease;
 }
-.annPic img:hover {
+.announcement:hover .annPic img {
   transform: scale(1.05);
+}
+.toLeft {
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  color: #000;
+  transition: 0.5s;
+  font-size: 30px;
+}
+.toLeft:hover {
+  left: -5px;
+  color: #000;
+}
+.toRight {
+  position: absolute;
+  bottom: 120px;
+  right: 0;
+  color: #000;
+  transition: 0.5s;
+  font-size: 30px;
+}
+.toRight:hover {
+  right: -5px;
+  color: #000;
 }
 .moreNews {
   border: 1px solid #af8f56;
@@ -349,7 +395,7 @@ body {
   background-color: #af8f56;
   color: #fff;
 }
-
+/* ---------------------------博物館------------------------------- */
 .museum {
   display: block;
   background: url("./images/homeMuseum-banner.jpg");
@@ -379,33 +425,41 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.sausagePlate {
+/* ---------------------------香腸盤子------------------------------- */
+/* .sausagePlate {
   height: 310px;
   width: 300px;
-}
+} */
 .sausagePlate > img {
   height: 100%;
-  min-width: auto;
+  width: 100%;
   object-fit: cover;
 }
 .bigTitle {
   color: #7c7c7c;
-  font-size: 50px;
   letter-spacing: 1px;
-  margin: 50px auto;
 }
-.content {
-  padding: 50px 0;
-  font-size: 15px;
-  letter-spacing: 1px;
-  line-height: 24px;
+.content p {
   color: #7c7c7c;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  margin: 50px 0;
-  height: 100%;
-  vertical-align: middle;
+  font-size: 15px;
+  line-height: 24px;
 }
+.lower-left-link {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  font-size: 16px;
+  color: #af8f56;
+  padding: 0 10px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.lower-left-link:hover {
+  color: red;
+  text-decoration: none;
+}
+/* ---------------------------小女孩------------------------------- */
 .girl {
   display: block;
   background: url("./images/homeVideo-banner.jpg");
@@ -448,4 +502,91 @@ body {
 .hover:hover .happiness {
   bottom: 35%;
   opacity: 1;
+}
+.event {
+}
+.event-link {
+  color: #000;
+}
+.event-link:hover {
+  text-decoration: none;
+}
+.date2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px dotted #000;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+  transition: 0.5s;
+}
+.charityPic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.charityPic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.event-title {
+  font-size: 24px;
+  transition: 0.5s;
+  overflow: hidden;
+  line-height: 30px;
+  height: 30px;
+}
+.event-content {
+  font-size: 16px;
+  color: #7c7c7c;
+  overflow: hidden;
+  line-height: 26px;
+  height: 78px;
+}
+.event-link:hover .date2 {
+  color: #af8f56;
+  border-color: #af8f56;
+}
+.event-link:hover .event-title {
+  color: #af8f56;
+}
+.event-link:hover .charityPic img {
+  transform: scale(1.1);
+}
+.footer p,
+.footer a {
+  color: #af8f56;
+  font-size: 15px;
+  line-height: 30px;
+}
+.footer {
+  background: url("./images/footer-bg.jpg");
+}
+.footerLogo {
+  height: 50px;
+  width: 250px;
+}
+.footerLogo img {
+  height: 100%;
+}
+.contactInfo {
+  max-width: 770px;
+}
+.contactIcon a {
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #af8f56;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  margin: 0 15px;
+}
+.goTop {
+  color: #af8f56;
+  margin: 30px 0 0px;
 }
