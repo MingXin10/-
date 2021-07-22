@@ -325,7 +325,7 @@ nav {
 }
 
 .nav-shopping-mall {
-  left: calc(90%);
+  right: 5%;
   position: absolute;
   z-index: 999;
 }
