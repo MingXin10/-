@@ -229,7 +229,7 @@ nav {
   height: 400px;
 }
 .nav-link li {
-  margin: 0 15px;
+  margin: 0 5px;
 }
 
 .museum:hover + .sausage {
@@ -254,7 +254,7 @@ nav {
     height: 580px;
   }
   .nav-link li {
-    margin: 0 25px;
+    margin: 0 20px;
   }
 
   .museum:hover + .sausage {
@@ -325,7 +325,7 @@ nav {
 }
 
 .nav-shopping-mall {
-  right: 5%;
+  right: 3%;
   position: absolute;
   z-index: 999;
 }
@@ -337,7 +337,10 @@ nav {
 .nav-fb-icon:hover {
   color: #000;
 }
-
+.fakediv {
+  width: 60px;
+  height: 60px;
+}
 .mall-button {
   background-color: #ffe100;
   width: 60px;
