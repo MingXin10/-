@@ -1,5 +1,5 @@
-* {
-  box-sizing: border-box;
+:root {
+  --brown: #af8f56;
 }
 html,
 body,
@@ -103,6 +103,13 @@ menu,
 nav,
 section {
   display: block;
+}
+* {
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   line-height: 1;
@@ -399,14 +406,6 @@ nav {
   /* padding-top: 40px; */
   background-origin: content-box;
 }
-.museum {
-  display: block;
-  background: url("./images/homeMuseum-banner.jpg");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  filter: brightness(0.6);
-}
 
 .slider {
   position: absolute;
@@ -442,6 +441,9 @@ nav {
   cursor: pointer;
   animation: goDown 2s linear infinite alternate both;
   text-align: center;
+}
+.goDown:hover {
+  color: #fff;
 }
 @keyframes goDown {
   0% {
@@ -500,8 +502,8 @@ nav {
   text-decoration: none;
 }
 .announcement:hover .date {
-  color: #af8f56;
-  border-color: #af8f56;
+  color: var(--brown);
+  border-color: var(--brown);
 }
 .annTitle {
   color: #000;
@@ -516,7 +518,7 @@ nav {
 }
 
 .announcement:hover .annTitle {
-  color: #af8f56;
+  color: var(--brown);
 }
 .annPic {
   overflow: hidden;
@@ -555,8 +557,8 @@ nav {
   color: #000;
 }
 .moreNews {
-  border: 1px solid #af8f56;
-  color: #af8f56;
+  border: 1px solid var(--brown);
+  color: var(--brown);
   text-align: center;
   letter-spacing: 1px;
   line-height: 35px;
@@ -569,7 +571,7 @@ nav {
 }
 .moreNews:hover {
   text-decoration: none;
-  background-color: #af8f56;
+  background-color: var(--brown);
   color: #fff;
 }
 /* ---------------------------博物館------------------------------- */
@@ -624,7 +626,7 @@ nav {
   right: 0;
   bottom: -8px;
   font-size: 16px;
-  color: #af8f56;
+  color: var(--brown);
   padding: 0 10px;
   background-color: #fff;
   transition: 0.5s;
@@ -719,11 +721,11 @@ nav {
   transition: 0.5s;
 }
 .event-link:hover .date2 {
-  color: #af8f56;
-  border-color: #af8f56;
+  color: var(--brown);
+  border-color: var(--brown);
 }
 .event-link:hover .event-title {
-  color: #af8f56;
+  color: var(--brown);
 }
 .event-link:hover .charityPic img {
   transform: scale(1.1);
@@ -731,7 +733,7 @@ nav {
 /* ---------------------------footer------------------------------- */
 .footer p,
 .footer a {
-  color: #af8f56;
+  color: var(--brown);
   font-size: 15px;
   line-height: 30px;
 }
@@ -751,15 +753,45 @@ nav {
 .contactIcon a {
   display: block;
   border-radius: 50%;
-  border: 1px solid #af8f56;
+  border: 1px solid var(--brown);
   font-size: 20px;
   line-height: 40px;
   width: 40px;
   height: 40px;
   margin: 0 5px;
 }
+#fb:hover {
+  transform: rotate(360deg);
+  transition: 0.5s;
+  background: var(--brown);
+  color: #251807;
+}
+#line:hover {
+  transform: rotate(360deg);
+  transition: 0.5s;
+  background: var(--brown);
+  color: #251807;
+}
+#ig:hover {
+  transform: rotate(360deg);
+  transition: 0.5s;
+  background: var(--brown);
+  color: #251807;
+}
+#cart-plus:hover {
+  transform: rotate(360deg);
+  transition: 0.5s;
+  background: var(--brown);
+  color: #251807;
+}
+#contact:hover {
+  transform: rotate(360deg);
+  transition: 0.5s;
+  background: var(--brown);
+  color: #251807;
+}
 
 .goTop {
-  color: #af8f56;
+  color: var(--brown);
   margin: 30px 0 0px;
 }

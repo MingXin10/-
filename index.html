@@ -112,7 +112,7 @@
     <!-----------------------------Banner--------------------------------->
     <div class="container-fluid relative mb-5">
       <div class="row">
-        <div class="banner"></div>
+        <div class="banner" id="banner"></div>
         <div class="slider">
           <div class="circle">
             <div class="inner"></div>
@@ -120,13 +120,14 @@
           <div class="circle"></div>
           <div class="circle"></div>
         </div>
-        <div class="goDown">
+
+        <a href="#24hr" class="goDown">
           <i class="fas fa-chevron-down"></i>
-        </div>
+        </a>
       </div>
     </div>
     <!-----------------------------24小時網路購物--------------------------------->
-    <div class="container mb-5">
+    <div class="container mb-5" id="24hr">
       <div class="row align-items-center">
         <div class="col-12 col-lg">
           <div
@@ -398,28 +399,34 @@
             </p>
           </div>
           <div class="contactIcon d-flex my-4 flex-wrap justify-content-center">
-            <a href="#">
+            <a
+              href="https://www.facebook.com/blackbridge.tw"
+              target="blank"
+              id="fb"
+            >
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#">
+            <a href="https://line.me/zh-hant/" target="blank" id="line">
               <i class="fab fa-line"></i>
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/" target="blank" id="ig">
               <i class="fab fa-instagram-square"></i>
             </a>
-            <a href="#">
+            <a href="#" id="cart-plus">
               <i class="fas fa-cart-plus"></i>
             </a>
-            <a href="#">
+            <a href="#" id="contact">
               <i class="fas fa-envelope"></i>
             </a>
           </div>
           <div class="goTop">
-            <a href=""><i class="fas fa-chevron-up"></i></a>
+            <a href="#banner"><i class="fas fa-chevron-up"></i></a>
           </div>
         </div>
       </div>
     </footer>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
