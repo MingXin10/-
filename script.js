@@ -59,3 +59,16 @@ for (let i = 0; i < circles.length; i++) {
     startInterval();
   });
 }
+//
+//導覽列變化
+$(window).scroll((e) => {
+  if ($(window).scrollTop() > 0) {
+    $("#navbar").addClass("navWhite");
+    $("li a").addClass("black");
+    $("#nav-fb").addClass("black");
+  } else {
+    $("#navbar").removeClass("navWhite");
+    $("li a").removeClass("black");
+    $("#nav-fb").removeClass("black");
+  }
+});
