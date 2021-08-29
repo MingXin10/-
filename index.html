@@ -111,15 +111,24 @@
     </nav>
     <!-----------------------------Banner--------------------------------->
     <div class="container-fluid relative mb-5">
-      <div class="row">
-        <div class="banner" id="banner"></div>
+      <div class="row" id="top">
+        <div class="banner active">
+          <img src="./images/3_官網首圖_肉絨奶黃包_2000x960.jpg" alt="" />
+        </div>
+        <div class="banner">
+          <img src="./images/2_官網首圖_宮保雞腿肉粽_2000x960.jpg" alt="" />
+        </div>
+        <div class="banner">
+          <img src="./images/midautumn.jpg" alt="" />
+        </div>
+
         <div class="slider">
-          <div class="circle">
-            <div class="inner"></div>
-          </div>
+          <div class="circle"></div>
           <div class="circle"></div>
           <div class="circle"></div>
         </div>
+        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
 
         <a href="#24hr" class="goDown">
           <i class="fas fa-chevron-down"></i>
