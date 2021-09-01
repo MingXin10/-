@@ -139,11 +139,13 @@ a {
   color: #fff;
 }
 .p1Text {
+  transition: 1s;
   font-size: 40px;
   color: #fff;
   font-style: italic;
 }
 .p2Text {
+  transition: 1s;
   font-size: 25px;
   color: #fff;
 }
@@ -297,6 +299,12 @@ nav {
   position: relative;
 }
 /* ---------------------------導覽列------------------------------- */
+nav {
+  transition: 1s;
+}
+nav.hide {
+  transform: translateY(-100px);
+}
 .navWhite {
   background-color: #fff;
 }
@@ -308,7 +316,12 @@ nav {
   width: 100%;
   height: auto;
 }
-.logo-desktop {
+
+.logo-big {
+  width: 100px;
+  height: 100px;
+}
+.logo-small {
   width: 60px;
   height: 60px;
 }
@@ -532,6 +545,7 @@ nav {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  /* transform: translateX(-50%); */
   font-weight: bold;
   text-align: center;
 

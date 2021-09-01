@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
+    <nav class="hide">
       <div class="container-fluid relative" id="navbar">
         <div class="d-flex justify-content-between">
           <div class="logo-mobile my-2 d-block d-lg-none">
@@ -58,7 +58,10 @@
         </div>
 
         <div class="d-flex">
-          <div class="logo-desktop my-1 d-none d-lg-block ml-3">
+          <div
+            class="logo-desktop logo-big my-1 d-none d-lg-block ml-3"
+            id="logo"
+          >
             <a href="#">
               <img src="./images/logo.png" alt="" />
             </a>
@@ -113,13 +116,18 @@
     <div class="container-fluid relative mb-5">
       <div class="row" id="top">
         <div class="banner active">
-          <img src="./images/3_官網首圖_肉絨奶黃包_2000x960.jpg" alt="" />
+          <img src="./images/3_官網首圖_肉絨奶黃包_2000x960.jpg" alt="" /
+          data-0="transform: translateY(-50px)" data-700="transform:
+          translateY(200px)">
         </div>
         <div class="banner">
-          <img src="./images/2_官網首圖_宮保雞腿肉粽_2000x960.jpg" alt="" />
+          <img src="./images/2_官網首圖_宮保雞腿肉粽_2000x960.jpg" alt="" /
+          data-0="transform: translateY(-50px)" data-700="transform:
+          translateY(200px)">
         </div>
         <div class="banner">
-          <img src="./images/midautumn.jpg" alt="" />
+          <img src="./images/midautumn.jpg" alt="" / data-0="transform:
+          translateY(-50px)" data-700="transform: translateY(200px)">
         </div>
 
         <div class="slider">
@@ -151,22 +159,35 @@
               mx-0
             "
           >
-            <p>24小時</p>
-            <p>網路購物</p>
-            <p>服務</p>
+            <div
+              data-150="transform: translateX(-150px); opacity: 0"
+              data-550="transform:
+          translateX(0px); opacity: 1"
+            >
+              <p>24小時</p>
+              <p>網路購物</p>
+              <p>服務</p>
+            </div>
           </div>
         </div>
         <div class="col-12 col-lg-4 mr-4">
-          <div class="content relative">
+          <div
+            class="content relative"
+            data-150="transform: translateY(150px); opacity: 0"
+            data-550="transform:
+          translateY(0px); opacity: 1"
+          >
             <p>
               1957年於台南創立，口碑傳承五十餘年，不僅是台灣香腸創始店，更是台灣美食特產的代表。特製香腸、肉酥、肉乾、牛肉乾及精緻伴手好禮，老字號的美味，送禮自用皆體面！
             </p>
+            <a class="lower-left-link" href="#">輕鬆購物去</a>
           </div>
-          <a class="lower-left-link" href="#">輕鬆購物去</a>
         </div>
         <div class="col-12 col-lg-5 order">
           <div class="sausagePlate">
-            <img src="./images/homeShopping-pic01.jpg" alt="" />
+            <img src="./images/homeShopping-pic01.jpg" alt="" /
+            data-150="transform: translateX(150px); opacity: 0"
+            data-550="transform: translateX(0px); opacity: 1">
           </div>
         </div>
       </div>
@@ -176,8 +197,8 @@
       <div class="row relative">
         <a class="newsBanner height" href="#"></a>
         <a class="newsText" href="#">
-          <p class="p1Text">What's New</p>
-          <p class="p2Text">最新消息</p>
+          <p class="p1Text relative">What's New</p>
+          <p class="p2Text relative">最新消息</p>
         </a>
       </div>
     </div>
@@ -258,7 +279,9 @@
       <div class="row align-items-center">
         <div class="col-12 col-lg-5">
           <div class="sausagePlate">
-            <img src="./images/homeMuseum-pic01.jpg" alt="" />
+            <img src="./images/homeMuseum-pic01.jpg" alt="" /
+            data-2250="transform: translateX(-150px); opacity: 0"
+            data-2750="transform: translateX(0px); opacity: 1">
           </div>
         </div>
         <div class="col-12 col-lg-3 px-0">
@@ -272,19 +295,28 @@
               bigTitleMaPa
             "
           >
-            <div>記憶中</div>
-            <p>不變</p>
-            <p>的味道</p>
+            <div
+              data-2250="transform: translateY(150px); opacity: 0"
+              data-2750="transform: translateY(0px); opacity: 1"
+            >
+              <div>記憶中</div>
+              <p>不變</p>
+              <p>的味道</p>
+            </div>
           </div>
         </div>
         <div class="col-12 col-lg-4">
-          <div class="content relative">
+          <div
+            class="content relative"
+            data-2250="transform: translateX(150px); opacity: 0"
+            data-2750="transform: translateX(0px); opacity: 1"
+          >
             <p>
               2012年香腸博物館落成，認真說著屬於我們的故事，透過館內打造原景重現的展覽內容，與您分享一起走來的黑橋牌，更以世界的角度
               表達「香腸」的飲食文化內涵。
             </p>
+            <a class="lower-left-link" href="#">預約參觀去</a>
           </div>
-          <a class="lower-left-link" href="#">預約參觀去</a>
         </div>
       </div>
     </div>
@@ -435,6 +467,12 @@
       </div>
     </footer>
     <script src="./js/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"
+      integrity="sha512-A2+khatRDWHUE2VUtN4xUTkr1nc4YfDBw9Sg3ea6x0aRPfpcYieDZji4D2edDHy/yF5NsYzP7kL8sSM8s5EqCw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
