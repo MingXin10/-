@@ -109,6 +109,7 @@ $(window).scroll(function () {
   changeImgPosition();
   sausage();
   navbarChange();
+  news();
 });
 
 function changeImgPosition() {
@@ -132,24 +133,6 @@ function changeImgPosition() {
       $(".24hrmid").css("transform", "translateY(150px)").css("opacity", 0);
       $(".24hrright").css("transform", "translateX(150px)").css("opacity", 0);
     }
-    //--------------------------------------------------------最新消息大字--------------------------------------------------------
-    if (percentage > 20) {
-      $(".p1Text").css("opacity", 1).css("bottom", 0);
-      $(".p2Text").css("opacity", 1).css("top", 0);
-    } else {
-      $(".p1Text").css("opacity", 0).css("bottom", "100px");
-      $(".p2Text").css("opacity", 0).css("top", "100px");
-    }
-    //--------------------------------------------------------不變的味道--------------------------------------------------------
-    if (percentage > 55) {
-      $(".plateleft").css("transform", "translateX(0px)").css("opacity", 1);
-      $(".platemid").css("transform", "translateY(0px)").css("opacity", 1);
-      $(".plateright").css("transform", "translateX(0px)").css("opacity", 1);
-    } else {
-      $(".plateleft").css("transform", "translateX(-150px)").css("opacity", 0);
-      $(".platemid").css("transform", "translateY(150px)").css("opacity", 0);
-      $(".plateright").css("transform", "translateX(150px)").css("opacity", 0);
-    }
   } else {
     //--------------------------------------------------------24小時購物--------------------------------------------------------
     if (percentage > 4) {
@@ -167,14 +150,7 @@ function changeImgPosition() {
     } else {
       $(".24hrmid").css("transform", "translateY(150px)").css("opacity", 0);
     }
-    //--------------------------------------------------------最新消息大字--------------------------------------------------------
-    if (percentage > 23) {
-      $(".p1Text").css("opacity", 1).css("bottom", 0);
-      $(".p2Text").css("opacity", 1).css("top", 0);
-    } else {
-      $(".p1Text").css("opacity", 0).css("bottom", "100px");
-      $(".p2Text").css("opacity", 0).css("top", "100px");
-    }
+
     //--------------------------------------------------------不變的味道--------------------------------------------------------
     if (percentage > 50) {
       $(".plateleft").css("transform", "translateX(0px)").css("opacity", 1);
@@ -191,6 +167,16 @@ function changeImgPosition() {
     } else {
       $(".plateright").css("transform", "translateY(150px)").css("opacity", 0);
     }
+  }
+  //--------------------------------------------------------不變的味道--------------------------------------------------------
+  if (percentage > 55) {
+    $(".plateleft").css("transform", "translateX(0px)").css("opacity", 1);
+    $(".platemid").css("transform", "translateY(0px)").css("opacity", 1);
+    $(".plateright").css("transform", "translateX(0px)").css("opacity", 1);
+  } else {
+    $(".plateleft").css("transform", "translateX(-150px)").css("opacity", 0);
+    $(".platemid").css("transform", "translateY(150px)").css("opacity", 0);
+    $(".plateright").css("transform", "translateX(150px)").css("opacity", 0);
   }
 
   //--------------------------------------------------------最新消息banner--------------------------------------------------------
@@ -232,7 +218,7 @@ function changeImgPosition() {
         .css("bottom", "0%")
         .css("opacity", 0);
     }
-  } else if (width > 991) {
+  } else if (width > 991 || width <= 479) {
     if (percentage > 65) {
       $(".play")
         .css("transform", "translate(-50%)")
@@ -253,7 +239,7 @@ function changeImgPosition() {
         .css("opacity", 0);
     }
   } else {
-    if (percentage > 70) {
+    if (percentage > 75) {
       $(".play")
         .css("transform", "translate(-50%)")
         .css("top", "25%")
@@ -302,6 +288,29 @@ function sausage() {
       $(".sausage").css("top", "50%").css("opacity", "1");
     } else {
       $(".sausage").css("top", 0).css("opacity", "0");
+    }
+  }
+}
+function news() {
+  //--------------------------------------------------------最新消息大字--------------------------------------------------------
+  const percentage =
+    ($(this).scrollTop() / ($("body").height() - $(window).height())) * 100;
+  const width = $(window).width();
+  if (width > 991 || width <= 767) {
+    if (percentage > 20) {
+      $(".p1Text").css("opacity", 1).css("bottom", 0);
+      $(".p2Text").css("opacity", 1).css("top", 0);
+    } else {
+      $(".p1Text").css("opacity", 0).css("bottom", "100px");
+      $(".p2Text").css("opacity", 0).css("top", "100px");
+    }
+  } else if (width > 767) {
+    if (percentage > 26) {
+      $(".p1Text").css("opacity", 1).css("bottom", 0);
+      $(".p2Text").css("opacity", 1).css("top", 0);
+    } else {
+      $(".p1Text").css("opacity", 0).css("bottom", "100px");
+      $(".p2Text").css("opacity", 0).css("top", "100px");
     }
   }
 }
