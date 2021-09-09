@@ -111,6 +111,7 @@ $(window).scroll(function () {
   navbarChange();
   news();
   charity();
+  flavor();
 });
 
 function changeImgPosition() {
@@ -151,33 +152,6 @@ function changeImgPosition() {
     } else {
       $(".24hrmid").css("transform", "translateY(150px)").css("opacity", 0);
     }
-
-    //--------------------------------------------------------不變的味道--------------------------------------------------------
-    if (percentage > 50) {
-      $(".plateleft").css("transform", "translateX(0px)").css("opacity", 1);
-    } else {
-      $(".plateleft").css("transform", "translateX(150px)").css("opacity", 0);
-    }
-    if (percentage > 59) {
-      $(".platemid").css("transform", "translateX(0px)").css("opacity", 1);
-    } else {
-      $(".platemid").css("transform", "translateX(-150px)").css("opacity", 0);
-    }
-    if (percentage > 62) {
-      $(".plateright").css("transform", "translateY(0px)").css("opacity", 1);
-    } else {
-      $(".plateright").css("transform", "translateY(150px)").css("opacity", 0);
-    }
-  }
-  //--------------------------------------------------------不變的味道--------------------------------------------------------
-  if (percentage > 55) {
-    $(".plateleft").css("transform", "translateX(0px)").css("opacity", 1);
-    $(".platemid").css("transform", "translateY(0px)").css("opacity", 1);
-    $(".plateright").css("transform", "translateX(0px)").css("opacity", 1);
-  } else {
-    $(".plateleft").css("transform", "translateX(-150px)").css("opacity", 0);
-    $(".platemid").css("transform", "translateY(150px)").css("opacity", 0);
-    $(".plateright").css("transform", "translateX(150px)").css("opacity", 0);
   }
 
   //--------------------------------------------------------最新消息banner--------------------------------------------------------
@@ -262,6 +236,55 @@ function changeImgPosition() {
   }
 
   console.log(percentage);
+}
+//--------------------------------------------------------不變的味道--------------------------------------------------------
+function flavor() {
+  const percentage =
+    ($(this).scrollTop() / ($("body").height() - $(window).height())) * 100;
+  const width = $(window).width();
+  if (width > 991) {
+    if (percentage > 55) {
+      $(".plateleft").css("transform", "translateX(0px)").css("opacity", 1);
+      $(".platemid").css("transform", "translateY(0px)").css("opacity", 1);
+      $(".plateright").css("transform", "translateX(0px)").css("opacity", 1);
+    } else {
+      $(".plateleft").css("transform", "translateX(-150px)").css("opacity", 0);
+      $(".platemid").css("transform", "translateY(150px)").css("opacity", 0);
+      $(".plateright").css("transform", "translateX(150px)").css("opacity", 0);
+    }
+  } else if (width > 767 || width <= 479) {
+    if (percentage > 50) {
+      $(".plateleft").css("transform", "translateX(0px)").css("opacity", 1);
+    } else {
+      $(".plateleft").css("transform", "translateX(150px)").css("opacity", 0);
+    }
+    if (percentage > 59) {
+      $(".platemid").css("transform", "translateX(0px)").css("opacity", 1);
+    } else {
+      $(".platemid").css("transform", "translateX(-150px)").css("opacity", 0);
+    }
+    if (percentage > 62) {
+      $(".plateright").css("transform", "translateY(0px)").css("opacity", 1);
+    } else {
+      $(".plateright").css("transform", "translateY(150px)").css("opacity", 0);
+    }
+  } else {
+    if (percentage > 60) {
+      $(".plateleft").css("transform", "translateX(0px)").css("opacity", 1);
+    } else {
+      $(".plateleft").css("transform", "translateX(150px)").css("opacity", 0);
+    }
+    if (percentage > 64) {
+      $(".platemid").css("transform", "translateX(0px)").css("opacity", 1);
+    } else {
+      $(".platemid").css("transform", "translateX(-150px)").css("opacity", 0);
+    }
+    if (percentage > 67) {
+      $(".plateright").css("transform", "translateY(0px)").css("opacity", 1);
+    } else {
+      $(".plateright").css("transform", "translateY(150px)").css("opacity", 0);
+    }
+  }
 }
 function sausage() {
   const percentage =
