@@ -110,6 +110,7 @@ $(window).scroll(function () {
   sausage();
   navbarChange();
   news();
+  charity();
 });
 
 function changeImgPosition() {
@@ -259,18 +260,7 @@ function changeImgPosition() {
         .css("opacity", 0);
     }
   }
-  //--------------------------------------------------------公益活動--------------------------------------------------------
-  if (percentage > 80) {
-    $(".charityTitle1").css("opacity", 1).css("transform", "translateY(0px)");
-    $(".charityTitle2").css("opacity", 1).css("transform", "translateY(0px)");
-    $(".linkWrap").css("opacity", 1).css("transform", "translateY(0px)");
-  } else {
-    $(".charityTitle1")
-      .css("opacity", 0)
-      .css("transform", "translateY(-100px)");
-    $(".charityTitle2").css("opacity", 0).css("transform", "translateY(100px)");
-    $(".linkWrap").css("opacity", 0).css("transform", "translateY(100px)");
-  }
+
   console.log(percentage);
 }
 function sausage() {
@@ -311,6 +301,41 @@ function news() {
     } else {
       $(".p1Text").css("opacity", 0).css("bottom", "100px");
       $(".p2Text").css("opacity", 0).css("top", "100px");
+    }
+  }
+}
+//--------------------------------------------------------公益活動--------------------------------------------------------
+function charity() {
+  const percentage =
+    ($(this).scrollTop() / ($("body").height() - $(window).height())) * 100;
+  const width = $(window).width();
+  if (width > 479) {
+    if (percentage > 80) {
+      $(".charityTitle1").css("opacity", 1).css("transform", "translateY(0px)");
+      $(".charityTitle2").css("opacity", 1).css("transform", "translateY(0px)");
+      $(".linkWrap").css("opacity", 1).css("transform", "translateY(0px)");
+    } else {
+      $(".charityTitle1")
+        .css("opacity", 0)
+        .css("transform", "translateY(-100px)");
+      $(".charityTitle2")
+        .css("opacity", 0)
+        .css("transform", "translateY(100px)");
+      $(".linkWrap").css("opacity", 0).css("transform", "translateY(100px)");
+    }
+  } else {
+    if (percentage > 70) {
+      $(".charityTitle1").css("opacity", 1).css("transform", "translateY(0px)");
+      $(".charityTitle2").css("opacity", 1).css("transform", "translateY(0px)");
+      $(".linkWrap").css("opacity", 1).css("transform", "translateY(0px)");
+    } else {
+      $(".charityTitle1")
+        .css("opacity", 0)
+        .css("transform", "translateY(-100px)");
+      $(".charityTitle2")
+        .css("opacity", 0)
+        .css("transform", "translateY(100px)");
+      $(".linkWrap").css("opacity", 0).css("transform", "translateY(100px)");
     }
   }
 }
