@@ -267,8 +267,8 @@ function sausage() {
   const percentage =
     ($(this).scrollTop() / ($("body").height() - $(window).height())) * 100;
   const width = $(window).width();
-  if (width > 767 || width < 479) {
-    if (percentage > 45) {
+  if (width > 767 || width <= 479) {
+    if (percentage > 46) {
       $(".sausage").css("top", "50%").css("opacity", "1");
     } else {
       $(".sausage").css("top", 0).css("opacity", "0");
