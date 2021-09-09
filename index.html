@@ -18,13 +18,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="Shortcut Icon" type="image/x-icon" href="./images/favicon.ico" />
 
     <link rel="stylesheet" href="style.css" />
@@ -72,7 +65,7 @@
                 <a href="#">關於黑橋</a>
               </li>
               <li>
-                <a href="#">最新消息</a>
+                <a href="#news">最新消息</a>
               </li>
               <li>
                 <a href="#">營業據點</a>
@@ -87,13 +80,13 @@
                 <a href="#">美味食譜</a>
               </li>
               <li>
-                <a href="#">香腸博物館</a>
+                <a href="#musuem">香腸博物館</a>
               </li>
               <li>
-                <a href="#">公益活動</a>
+                <a href="#charity">公益活動</a>
               </li>
               <li>
-                <a href="#">聯絡我們</a>
+                <a href="#footer">聯絡我們</a>
               </li>
             </ul>
           </div>
@@ -116,18 +109,13 @@
     <div class="container-fluid relative mb-5">
       <div class="row" id="top">
         <div class="banner active">
-          <img src="./images/3_官網首圖_肉絨奶黃包_2000x960.jpg" alt="" /
-          data-0="transform: translateY(-50px)" data-700="transform:
-          translateY(200px)">
+          <img src="./images/3_官網首圖_肉絨奶黃包_2000x960.jpg" alt="" />
         </div>
         <div class="banner">
-          <img src="./images/2_官網首圖_宮保雞腿肉粽_2000x960.jpg" alt="" /
-          data-0="transform: translateY(-50px)" data-700="transform:
-          translateY(200px)">
+          <img src="./images/2_官網首圖_宮保雞腿肉粽_2000x960.jpg" alt="" />
         </div>
         <div class="banner">
-          <img src="./images/midautumn.jpg" alt="" / data-0="transform:
-          translateY(-50px)" data-700="transform: translateY(200px)">
+          <img src="./images/midautumn.jpg" alt="" />
         </div>
 
         <div class="slider">
@@ -146,7 +134,7 @@
     <!-----------------------------24小時網路購物--------------------------------->
     <div class="container mb-5" id="24hr">
       <div class="row align-items-center">
-        <div class="col-12 col-lg">
+        <div class="col-12 col-lg overflow-hidden">
           <div
             class="
               bigTitle
@@ -159,11 +147,7 @@
               mx-0
             "
           >
-            <div
-              data-150="transform: translateX(-150px); opacity: 0"
-              data-550="transform:
-          translateX(0px); opacity: 1"
-            >
+            <div class="24hrleft tran1s">
               <p>24小時</p>
               <p>網路購物</p>
               <p>服務</p>
@@ -171,38 +155,36 @@
           </div>
         </div>
         <div class="col-12 col-lg-4 mr-4">
-          <div
-            class="content relative"
-            data-150="transform: translateY(150px); opacity: 0"
-            data-550="transform:
-          translateY(0px); opacity: 1"
-          >
+          <div class="content relative 24hrmid tran1s">
             <p>
               1957年於台南創立，口碑傳承五十餘年，不僅是台灣香腸創始店，更是台灣美食特產的代表。特製香腸、肉酥、肉乾、牛肉乾及精緻伴手好禮，老字號的美味，送禮自用皆體面！
             </p>
             <a class="lower-left-link" href="#">輕鬆購物去</a>
           </div>
         </div>
-        <div class="col-12 col-lg-5 order">
+        <div class="col-12 col-lg-5 order overflow-hidden">
           <div class="sausagePlate">
-            <img src="./images/homeShopping-pic01.jpg" alt="" /
-            data-150="transform: translateX(150px); opacity: 0"
-            data-550="transform: translateX(0px); opacity: 1">
+            <img
+              src="./images/homeShopping-pic01.jpg"
+              alt=""
+              class="24hrright tran1s"
+            />
           </div>
         </div>
       </div>
     </div>
     <!-----------------------------What's New--------------------------------->
-    <div class="container-fluid mb-5">
+    <div class="container-fluid mb-5" id="news">
       <div class="row relative">
-        <a class="newsBanner height" href="#"></a>
+        <div class="newsBanner height" href="#">
+          <img src="./images/homeNews-banner.jpg" alt="" />
+        </div>
         <a class="newsText" href="#">
           <p class="p1Text relative">What's New</p>
           <p class="p2Text relative">最新消息</p>
         </a>
       </div>
     </div>
-
     <!-----------------------------公告--------------------------------->
     <div class="container mb-5">
       <div class="row mb-5">
@@ -266,9 +248,12 @@
       <a class="moreNews" href="#">更多最新消息</a>
     </div>
     <!-----------------------------博物館--------------------------------->
-    <div class="container-fluid relative hidden mb-5">
+    <div class="container-fluid relative hidden mb-5" id="musuem">
       <div class="row">
-        <a href="#" class="museum height"></a>
+        <div class="museum height">
+          <img src="./images/homeMuseum-banner.jpg" alt="" />
+        </div>
+
         <div class="sausage">
           <img src="./images/homeMuseum-banner-slogan.png" alt="" />
         </div>
@@ -277,11 +262,13 @@
     <!-----------------------------香腸盤子--------------------------------->
     <div class="container mb-5">
       <div class="row align-items-center">
-        <div class="col-12 col-lg-5">
+        <div class="col-12 col-lg-5 overflow-hidden">
           <div class="sausagePlate">
-            <img src="./images/homeMuseum-pic01.jpg" alt="" /
-            data-2250="transform: translateX(-150px); opacity: 0"
-            data-2750="transform: translateX(0px); opacity: 1">
+            <img
+              src="./images/homeMuseum-pic01.jpg"
+              alt=""
+              class="plateleft tran1s"
+            />
           </div>
         </div>
         <div class="col-12 col-lg-3 px-0">
@@ -295,22 +282,15 @@
               bigTitleMaPa
             "
           >
-            <div
-              data-2250="transform: translateY(150px); opacity: 0"
-              data-2750="transform: translateY(0px); opacity: 1"
-            >
+            <div class="platemid tran1s">
               <div>記憶中</div>
               <p>不變</p>
               <p>的味道</p>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4">
-          <div
-            class="content relative"
-            data-2250="transform: translateX(150px); opacity: 0"
-            data-2750="transform: translateX(0px); opacity: 1"
-          >
+        <div class="col-12 col-lg-4 overflow-hidden">
+          <div class="content relative plateright tran1s">
             <p>
               2012年香腸博物館落成，認真說著屬於我們的故事，透過館內打造原景重現的展覽內容，與您分享一起走來的黑橋牌，更以世界的角度
               表達「香腸」的飲食文化內涵。
@@ -323,7 +303,10 @@
     <!-----------------------------小女孩--------------------------------->
     <div class="container-fluid relative hidden mb-5">
       <div class="row hover">
-        <a href="#" class="girl height"></a>
+        <div class="girl height">
+          <img src="./images/homeVideo-banner.jpg" alt="" />
+        </div>
+
         <div class="play text-white pl-fz">
           <i class="far fa-play-circle"></i>
         </div>
@@ -345,9 +328,11 @@
     </div>
     <!-----------------------------公益活動--------------------------------->
 
-    <div class="title">
-      <p class="text-center font-weight-bold font-italic h1">Charity</p>
-      <p class="text-center h4 py-3">公益活動</p>
+    <div class="title" id="charity">
+      <p class="text-center font-weight-bold font-italic h1 charityTitle1">
+        Charity
+      </p>
+      <p class="text-center h4 py-3 charityTitle2">公益活動</p>
     </div>
     <div class="linkWrap px-3">
       <a href="#" class="event-link border-bottom border-top py-3 f-column">
@@ -419,7 +404,7 @@
 
     <!-----------------------------footer--------------------------------->
     <footer>
-      <div class="footer pt-5 text-center">
+      <div class="footer pt-5 text-center" id="footer">
         <div class="container d-flex flex-column align-items-center">
           <div class="footerLogo">
             <img src="./images/footer-logo.png" alt="" />
@@ -467,12 +452,12 @@
       </div>
     </footer>
     <script src="./js/jquery-3.6.0.min.js"></script>
-    <script
+    <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"
       integrity="sha512-A2+khatRDWHUE2VUtN4xUTkr1nc4YfDBw9Sg3ea6x0aRPfpcYieDZji4D2edDHy/yF5NsYzP7kL8sSM8s5EqCw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+    ></script> -->
     <script src="script.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
